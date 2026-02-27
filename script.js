@@ -2,8 +2,11 @@ document.getElementById('greetBtn').addEventListener("click", function () {
 
     let username = document.getElementById('name').value;
 
-    document.getElementById('heading').textContent =
-        "Hello, " + username;
+    if (username === "") {
+        document.getElementById('heading').textContent = "Hello";
+    } else {
+        document.getElementById('heading').textContent = "Hello, " + username + "!";
+    }
 });
 
 const boxes = document.querySelectorAll('.box');
@@ -25,4 +28,5 @@ boxes.forEach(box => {
         }
     })
 })
+
 
